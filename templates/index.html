@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PayRoll Management System</title>
+    <style>
+        body {
+            background-color: #121212; /* Set the background color to dark */
+            color: #fff;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+
+        h1 {
+            color: #fff;
+            margin-top: 0;
+        }
+
+        .section {
+            background-color: #333;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            transition: background-color 0.3s;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+            border: 2px solid #8cff6e; /* Adjust the border color as desired */
+            animation: slideIn 0.5s ease-out forwards;
+            animation-delay: 0.1s;
+        }
+
+        .section:hover {
+            background-color: #444;
+        }
+
+        .section a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .section a:hover {
+            color: #99f;
+        }
+
+        .section-heading {
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 24px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .section:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #8cff6e; /* Adjust the color as desired */
+            opacity: 0;
+            transition: opacity 0.3s;
+            z-index: 1;
+        }
+
+        .section:hover:before {
+            opacity: 0.6;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(100%);
+            }
+
+            to {
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>PayRoll Management System</h1>
+
+    <div class="section" onclick="location.href='/employee-signup';">
+        <h2 class="section-heading">Employee Signup</h2>
+        <p>Provide a brief description of the employee signup section.</p>
+        <a href="/employee-signup">Go to Employee Signup</a>
+    </div>
+
+    <div class="section" onclick="location.href='/attendance';">
+        <h2 class="section-heading">Attendance</h2>
+        <p>Provide a brief description of the attendance section.</p>
+        <a href="/attendance">Go to Attendance</a>
+    </div>
+
+    <div class="section" onclick="location.href='/payroll-release';">
+        <h2 class="section-heading">Payroll Release</h2>
+        <p>Provide a brief description of the payroll release section.</p>
+        <a href="/payroll-release">Go to Payroll Release</a>
+    </div>
+
+    <div class="section" onclick="location.href='/show-employees';">
+        <h2 class="section-heading">Show Employees</h2>
+        <p>Provide a brief description of the show employees section.</p>
+        <a href="/show-employees">Go to Show Employees</a>
+    </div>
+
+    <div class="section" onclick="location.href='/salary';">
+        <h2 class="section-heading">Salary</h2>
+        <p>Provide a brief description of the salary section.</p>
+        <a href="/salary">Go to Salary</a>
+    </div>
+</body>
+
+</html>

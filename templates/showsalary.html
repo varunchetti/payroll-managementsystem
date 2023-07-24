@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Show Salary</title>
+    <style>
+        body {
+            background-color: #333;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+
+        h2 {
+            text-align: center;
+            padding-top: 20px;
+            color: #00bcd4;
+        }
+
+        .salary-container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #222;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .result {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 3px;
+            background-color: #444;
+            color: #fff;
+        }
+
+        input[type="submit"] {
+            margin-top: 20px;
+            padding: 10px 15px;
+            background-color: #00bcd4;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0097a7;
+        }
+    </style>
+</head>
+<body>
+    <h2>Show Salary</h2>
+    <div class="salary-container">
+        <form action="/payroll-release" method="POST">
+            <label for="empid">Employee ID:</label>
+            <input type="text" id="empid" name="empid" required>
+
+            <input type="submit" value="Calculate Salary">
+        </form>
+        {% if data %}
+        <div class="result">
+            <p>Employee ID: {{ data['EmployeeId'] }}</p>
+            <p>Total Salary: {{ data['TotalSalary'] }}</p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
